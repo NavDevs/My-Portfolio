@@ -4,6 +4,14 @@ import { FaGithub, FaExternalLinkAlt, FaGooglePlay, FaMobile } from 'react-icons
 const Projects = () => {
     const projects = [
         {
+            title: "🧠 DocMind – AI Document Assistant",
+            description: "A full-stack RAG application that lets you upload PDFs and chat with them using AI. Get instant summaries, ask questions, and track usage through an analytics dashboard.",
+            tech: ["React", "Node.js", "MongoDB", "OpenAI", "Firebase", "Pinecone"],
+            github: "https://github.com/NavDevs/DocMind",
+            live: "https://docmind-client.onrender.com",
+            api: "https://docmind-server.onrender.com"
+        },
+        {
             title: "🎓 InternAI – AI Internship Platform",
             description: "An AI-powered internship discovery and application tracking platform for students, featuring real-time job search, AI career assistant, and profile management with Firebase integration.",
             tech: ["React", "Firebase", "Node.js", "AI Integration", "Real-time"],
