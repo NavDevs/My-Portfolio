@@ -4,7 +4,7 @@ A modern, responsive portfolio website built to showcase my projects, skills, an
 
 ## 🚀 Live Demo
 
-[**View Live Portfolio**](https://nas23ise-dot.github.io/My-Portfolio/)
+[**View Live Portfolio**](https://navdevs.github.io/My-Portfolio/)
 
 ## 🛠️ Tech Stack
 
@@ -16,7 +16,7 @@ A modern, responsive portfolio website built to showcase my projects, skills, an
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/nas23ise-dot/My-Portfolio.git
+   git clone https://github.com/NavDevs/My-Portfolio.git
    ```
 2. Install dependencies:
    ```bash
