@@ -32,7 +32,7 @@ const Projects = () => {
             description: "A comprehensive safety application with real-time GPS tracking, emergency SOS alerts, 3-layer protection system, and community volunteer network. Features cyber & physical emergency response.",
             tech: ["Flutter", "Dart", "Google Maps", "Firebase", "Provider"],
             github: "https://github.com/nas23ise-dot/SafeCity",
-            live: "https://nas23ise-dot.github.io/SafeCity/",
+            live: "https://drive.google.com/drive/folders/1Osf8jMaN_GrT0kpfCPdcXufKZ2qOa4-k?usp=sharing",
             appType: "mobile"
         },
         {
