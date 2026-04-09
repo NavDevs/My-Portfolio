@@ -72,7 +72,7 @@ const Projects = () => {
         >
             {/* Header */}
             <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}>
-                <h1 className="section-title">Projects</h1>
+                <h1 className="section-title cyber-glitch" data-text="PROJECTS">PROJECTS</h1>
                 <div className="section-underline" />
             </motion.div>
 
@@ -80,9 +80,15 @@ const Projects = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.1 }}
-                style={{ color: 'var(--text-secondary)', marginBottom: '2rem', maxWidth: '600px' }}
+                style={{ 
+                    color: 'var(--text-secondary)', 
+                    marginBottom: '2rem', 
+                    maxWidth: '600px',
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '0.9rem'
+                }}
             >
-                Here are some of my recent projects. Click the links to view them live!
+                {'>'} ACCESSING PROJECT DATABASE... SELECT A PROJECT TO VIEW DETAILS_
             </motion.p>
 
             {/* Projects Grid */}
@@ -102,21 +108,27 @@ const Projects = () => {
                         variants={cardVariants}
                         className="card"
                         whileHover={{
-                            y: -8,
-                            boxShadow: '0 20px 50px -15px var(--accent-glow)'
+                            y: -4,
+                            boxShadow: '0 0 20px rgba(0, 255, 136, 0.4), 0 0 40px rgba(0, 255, 136, 0.2)'
                         }}
                         style={{
                             display: 'flex',
                             flexDirection: 'column',
                             height: '100%',
-                            border: '1px solid rgba(139, 92, 246, 0.15)'
+                            border: '1px solid var(--border)',
+                            background: 'var(--bg-card)',
+                            clipPath: 'polygon(0 10px, 10px 0, calc(100% - 10px) 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0 calc(100% - 10px))'
                         }}
                     >
                         <h3 style={{
-                            fontSize: '1.15rem',
+                            fontSize: '1.05rem',
                             marginBottom: '0.8rem',
-                            color: '#fff',
-                            fontWeight: 600
+                            color: 'var(--accent-primary)',
+                            fontWeight: 700,
+                            fontFamily: 'var(--font-heading)',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.05em',
+                            textShadow: '0 0 10px rgba(0, 255, 136, 0.3)'
                         }}>
                             {project.title}
                         </h3>
@@ -125,8 +137,9 @@ const Projects = () => {
                             color: 'var(--text-secondary)',
                             marginBottom: '1.2rem',
                             lineHeight: '1.6',
-                            fontSize: '0.9rem',
-                            flex: 1
+                            fontSize: '0.85rem',
+                            flex: 1,
+                            fontFamily: 'var(--font-body)'
                         }}>
                             {project.description}
                         </p>
@@ -135,11 +148,13 @@ const Projects = () => {
                             {project.tech.map((t, i) => (
                                 <span key={i} style={{
                                     fontSize: '0.7rem',
-                                    padding: '0.2rem 0.6rem',
-                                    background: 'rgba(139, 92, 246, 0.15)',
-                                    border: '1px solid rgba(139, 92, 246, 0.3)',
-                                    borderRadius: '20px',
-                                    color: 'var(--accent-primary)'
+                                    padding: '0.25rem 0.6rem',
+                                    background: 'rgba(0, 255, 136, 0.1)',
+                                    border: '1px solid rgba(0, 255, 136, 0.3)',
+                                    color: 'var(--accent-primary)',
+                                    fontFamily: 'var(--font-accent)',
+                                    letterSpacing: '0.05em',
+                                    clipPath: 'polygon(0 4px, 4px 0, calc(100% - 4px) 0, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 0 calc(100% - 4px))'
                                 }}>
                                     {t}
                                 </span>
@@ -157,11 +172,21 @@ const Projects = () => {
                                         alignItems: 'center',
                                         gap: '0.4rem',
                                         color: 'var(--text-secondary)',
-                                        fontSize: '0.85rem',
-                                        transition: 'color 0.3s'
+                                        fontSize: '0.8rem',
+                                        fontFamily: 'var(--font-accent)',
+                                        transition: 'all 0.3s',
+                                        letterSpacing: '0.05em'
+                                    }}
+                                    onMouseEnter={(e) => {
+                                        e.currentTarget.style.color = 'var(--accent-primary)';
+                                        e.currentTarget.style.textShadow = '0 0 8px rgba(0, 255, 136, 0.5)';
+                                    }}
+                                    onMouseLeave={(e) => {
+                                        e.currentTarget.style.color = 'var(--text-secondary)';
+                                        e.currentTarget.style.textShadow = 'none';
                                     }}
                                 >
-                                    <FaGithub /> GitHub
+                                    <FaGithub /> [CODE]
                                 </a>
                             )}
                             {project.live && (
@@ -173,14 +198,23 @@ const Projects = () => {
                                         display: 'flex',
                                         alignItems: 'center',
                                         gap: '0.4rem',
-                                        color: 'var(--accent-primary)',
-                                        fontSize: '0.85rem',
-                                        transition: 'color 0.3s',
-                                        fontWeight: 500
+                                        color: 'var(--accent-tertiary)',
+                                        fontSize: '0.8rem',
+                                        fontFamily: 'var(--font-accent)',
+                                        transition: 'all 0.3s',
+                                        fontWeight: 600,
+                                        letterSpacing: '0.05em',
+                                        textShadow: '0 0 8px rgba(0, 212, 255, 0.3)'
+                                    }}
+                                    onMouseEnter={(e) => {
+                                        e.currentTarget.style.textShadow = '0 0 15px rgba(0, 212, 255, 0.6)';
+                                    }}
+                                    onMouseLeave={(e) => {
+                                        e.currentTarget.style.textShadow = '0 0 8px rgba(0, 212, 255, 0.3)';
                                     }}
                                 >
                                     {project.appType === 'mobile' ? <FaMobile /> : <FaExternalLinkAlt />}
-                                    {project.appType === 'mobile' ? 'Download' : 'Live Demo'}
+                                    {project.appType === 'mobile' ? '[APK]' : '[LIVE]'}
                                 </a>
                             )}
                             {project.api && (
@@ -193,11 +227,21 @@ const Projects = () => {
                                         alignItems: 'center',
                                         gap: '0.4rem',
                                         color: 'var(--text-muted)',
-                                        fontSize: '0.85rem',
-                                        transition: 'color 0.3s'
+                                        fontSize: '0.8rem',
+                                        fontFamily: 'var(--font-accent)',
+                                        transition: 'all 0.3s',
+                                        letterSpacing: '0.05em'
+                                    }}
+                                    onMouseEnter={(e) => {
+                                        e.currentTarget.style.color = 'var(--accent-primary)';
+                                        e.currentTarget.style.textShadow = '0 0 8px rgba(0, 255, 136, 0.5)';
+                                    }}
+                                    onMouseLeave={(e) => {
+                                        e.currentTarget.style.color = 'var(--text-muted)';
+                                        e.currentTarget.style.textShadow = 'none';
                                     }}
                                 >
-                                    <FaExternalLinkAlt /> API
+                                    <FaExternalLinkAlt /> [API]
                                 </a>
                             )}
                         </div>

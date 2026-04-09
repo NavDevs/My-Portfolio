@@ -61,10 +61,16 @@ const Contact = () => {
                 animate={{ opacity: 1, y: 0 }}
                 style={{ marginBottom: '3rem' }}
             >
-                <h1 className="section-title">Get In Touch</h1>
+                <h1 className="section-title cyber-glitch" data-text="CONTACT">CONTACT</h1>
                 <div className="section-underline" style={{ margin: '0 auto' }} />
-                <p style={{ color: 'var(--text-secondary)', marginTop: '1rem', maxWidth: '500px' }}>
-                    I'm always open to new opportunities and collaborations. Feel free to reach out through any of the platforms below!
+                <p style={{ 
+                    color: 'var(--text-secondary)', 
+                    marginTop: '1rem', 
+                    maxWidth: '500px',
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '0.9rem'
+                }}>
+                    {'>'} INITIATING COMMUNICATION PROTOCOL... SELECT CHANNEL BELOW_
                 </p>
             </motion.div>
 
@@ -89,35 +95,53 @@ const Contact = () => {
                         target={info.link.startsWith('http') ? "_blank" : "_self"}
                         rel="noopener noreferrer"
                         className="card"
-                        whileHover={{ y: -8, borderColor: 'var(--accent-primary)' }}
+                        whileHover={{ 
+                            y: -4, 
+                            borderColor: 'var(--accent-primary)',
+                            boxShadow: '0 0 20px rgba(0, 255, 136, 0.3)'
+                        }}
                         style={{
                             padding: '2rem',
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',
                             gap: '1rem',
-                            textDecoration: 'none'
+                            textDecoration: 'none',
+                            border: '1px solid var(--border)',
+                            clipPath: 'polygon(0 10px, 10px 0, calc(100% - 10px) 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0 calc(100% - 10px))'
                         }}
                     >
                         <div style={{
                             color: 'var(--accent-primary)',
                             fontSize: '2rem',
-                            background: 'rgba(139, 92, 246, 0.1)',
-                            width: '60px',
-                            height: '60px',
-                            borderRadius: '50%',
+                            background: 'rgba(0, 255, 136, 0.1)',
+                            width: '70px',
+                            height: '70px',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
                             marginBottom: '0.5rem',
-                            boxShadow: '0 0 20px var(--accent-glow)'
+                            border: '2px solid var(--accent-primary)',
+                            boxShadow: '0 0 15px rgba(0, 255, 136, 0.3)',
+                            clipPath: 'polygon(0 8px, 8px 0, calc(100% - 8px) 0, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0 calc(100% - 8px))'
                         }}>
                             {info.icon}
                         </div>
-                        <h4 style={{ color: 'var(--text-muted)', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                        <h4 style={{ 
+                            color: 'var(--text-muted)', 
+                            fontSize: '0.8rem', 
+                            textTransform: 'uppercase', 
+                            letterSpacing: '0.15em',
+                            fontFamily: 'var(--font-accent)'
+                        }}>
                             {info.label}
                         </h4>
-                        <p style={{ color: '#fff', fontSize: '1.1rem', fontWeight: 500 }}>
+                        <p style={{ 
+                            color: '#fff', 
+                            fontSize: '1rem', 
+                            fontWeight: 600,
+                            fontFamily: 'var(--font-body)'
+                        }}>
                             {info.value}
                         </p>
                     </motion.a>
@@ -131,15 +155,29 @@ const Contact = () => {
                 transition={{ delay: 0.4 }}
                 style={{ textAlign: 'center' }}
             >
-                <h3 style={{ marginBottom: '2rem', fontSize: '1.5rem', color: '#fff' }}>Connect With Me</h3>
-                <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center', marginBottom: '3rem', flexWrap: 'wrap' }}>
+                <h3 style={{ 
+                    marginBottom: '2rem', 
+                    fontSize: '1.3rem', 
+                    color: '#fff',
+                    fontFamily: 'var(--font-heading)',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.1em',
+                    textShadow: '0 0 10px rgba(0, 255, 136, 0.3)'
+                }}>
+                    {'>'} Network_Channels
+                </h3>
+                <div style={{ display: 'flex', gap: '2.5rem', justifyContent: 'center', marginBottom: '3rem', flexWrap: 'wrap' }}>
                     {socialLinks.map((link, idx) => (
                         <motion.a
                             key={idx}
                             href={link.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            whileHover={{ scale: 1.2, color: link.color }}
+                            whileHover={{ 
+                                scale: 1.15,
+                                color: link.color,
+                                textShadow: `0 0 15px ${link.color}`
+                            }}
                             style={{
                                 display: 'flex',
                                 flexDirection: 'column',
@@ -150,7 +188,13 @@ const Contact = () => {
                             }}
                         >
                             <span style={{ fontSize: '2.5rem' }}>{link.icon}</span>
-                            <span style={{ fontSize: '0.8rem', fontWeight: 600 }}>{link.label}</span>
+                            <span style={{ 
+                                fontSize: '0.75rem', 
+                                fontWeight: 600,
+                                fontFamily: 'var(--font-accent)',
+                                letterSpacing: '0.1em',
+                                textTransform: 'uppercase'
+                            }}>{link.label}</span>
                         </motion.a>
                     ))}
                 </div>
@@ -167,10 +211,10 @@ const Contact = () => {
                         alignItems: 'center',
                         gap: '0.8rem',
                         padding: '1rem 2.5rem',
-                        fontSize: '1.1rem'
+                        fontSize: '0.9rem'
                     }}
                 >
-                    <FaEnvelope /> Send an Email
+                    <FaEnvelope /> {'>'} TRANSMIT_EMAIL
                 </motion.a>
             </motion.div>
         </motion.div>

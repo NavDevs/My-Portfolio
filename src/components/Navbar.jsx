@@ -43,13 +43,22 @@ const Navbar = () => {
                 width: '100%',
                 zIndex: 1000,
                 backdropFilter: 'blur(10px)',
-                background: 'rgba(10, 10, 10, 0.9)',
-                borderBottom: '1px solid rgba(255, 255, 255, 0.05)',
+                background: 'var(--nav-bg)',
+                borderBottom: '2px solid var(--accent-primary)',
+                boxShadow: '0 2px 20px rgba(0, 255, 136, 0.2)',
                 padding: '1rem 2rem'
             }}>
                 <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: 0 }}>
-                    <NavLink to="/" className="nav-logo" style={{ fontSize: '1.5rem', fontWeight: 700, letterSpacing: '-0.5px' }}>
-                        Naveen<span className="gradient-text">.S</span>
+                    <NavLink to="/" className="nav-logo" style={{ 
+                        fontSize: '1.5rem', 
+                        fontWeight: 800, 
+                        fontFamily: 'var(--font-heading)',
+                        letterSpacing: '0.1em',
+                        textTransform: 'uppercase',
+                        color: 'var(--accent-primary)',
+                        textShadow: '0 0 10px rgba(0, 255, 136, 0.5)'
+                    }}>
+                        Naveen<span style={{ color: 'var(--accent-tertiary)' }}>.S</span>
                     </NavLink>
 
                     {/* Desktop Menu */}
@@ -60,10 +69,16 @@ const Navbar = () => {
                                     to={link.to}
                                     className={({ isActive }) => isActive ? 'active' : ''}
                                     style={({ isActive }) => ({
-                                        opacity: isActive ? 1 : 0.7,
-                                        fontWeight: isActive ? 500 : 400,
+                                        fontFamily: 'var(--font-accent)',
+                                        fontSize: '0.85rem',
+                                        textTransform: 'uppercase',
+                                        letterSpacing: '0.15em',
+                                        color: isActive ? 'var(--accent-primary)' : 'var(--text-secondary)',
+                                        fontWeight: isActive ? 700 : 500,
                                         position: 'relative',
-                                        padding: '0.5rem 0'
+                                        padding: '0.5rem 0',
+                                        transition: 'all 0.3s',
+                                        textShadow: isActive ? '0 0 10px rgba(0, 255, 136, 0.5)' : 'none'
                                     })}
                                 >
                                     {link.name}
@@ -72,12 +87,12 @@ const Navbar = () => {
                                             layoutId="underline"
                                             style={{
                                                 position: 'absolute',
-                                                bottom: '-2px',
+                                                bottom: '-4px',
                                                 left: 0,
                                                 right: 0,
                                                 height: '2px',
-                                                background: 'var(--accent-gradient)',
-                                                borderRadius: '2px'
+                                                background: 'var(--accent-primary)',
+                                                boxShadow: '0 0 10px var(--accent-primary)'
                                             }}
                                             transition={{ type: "spring", stiffness: 300, damping: 30 }}
                                         />
@@ -91,7 +106,11 @@ const Navbar = () => {
                     <button
                         onClick={toggleMenu}
                         className="mobile-toggle"
-                        style={{ fontSize: '1.5rem', color: '#fff' }}
+                        style={{ 
+                            fontSize: '1.5rem', 
+                            color: 'var(--accent-primary)',
+                            textShadow: '0 0 10px rgba(0, 255, 136, 0.5)'
+                        }}
                     >
                         <FaBars />
                     </button>
@@ -131,14 +150,15 @@ const Navbar = () => {
                                 position: 'fixed',
                                 top: 0,
                                 left: 0,
-                                width: '280px',
-                                maxWidth: '80vw',
+                                width: '300px',
+                                maxWidth: '85vw',
                                 height: '100%',
-                                background: 'linear-gradient(180deg, #0a0a0a 0%, #121212 100%)',
+                                background: 'linear-gradient(180deg, #0a0a0f 0%, #12121a 100%)',
                                 zIndex: 1002,
                                 display: 'flex',
                                 flexDirection: 'column',
-                                boxShadow: '4px 0 30px rgba(0, 0, 0, 0.5)'
+                                borderRight: '2px solid var(--accent-primary)',
+                                boxShadow: '4px 0 30px rgba(0, 255, 136, 0.2)'
                             }}
                         >
                             {/* Sidebar Header */}
@@ -147,13 +167,16 @@ const Navbar = () => {
                                 justifyContent: 'space-between',
                                 alignItems: 'center',
                                 padding: '1.5rem',
-                                borderBottom: '1px solid rgba(255, 255, 255, 0.08)'
+                                borderBottom: '1px solid var(--border)'
                             }}>
                                 <div style={{
                                     position: 'relative',
-                                    padding: '0.5rem 1rem'
+                                    padding: '0.5rem 1rem',
+                                    fontFamily: 'var(--font-heading)',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.2em'
                                 }}>
-                                    {/* Corner brackets */}
+                                    {/* Corner brackets - cyberpunk style */}
                                     <span style={{
                                         position: 'absolute',
                                         top: 0,
@@ -161,7 +184,8 @@ const Navbar = () => {
                                         width: '12px',
                                         height: '12px',
                                         borderLeft: '2px solid var(--accent-primary)',
-                                        borderTop: '2px solid var(--accent-primary)'
+                                        borderTop: '2px solid var(--accent-primary)',
+                                        boxShadow: '0 0 5px var(--accent-primary)'
                                     }} />
                                     <span style={{
                                         position: 'absolute',
@@ -170,7 +194,8 @@ const Navbar = () => {
                                         width: '12px',
                                         height: '12px',
                                         borderRight: '2px solid var(--accent-primary)',
-                                        borderTop: '2px solid var(--accent-primary)'
+                                        borderTop: '2px solid var(--accent-primary)',
+                                        boxShadow: '0 0 5px var(--accent-primary)'
                                     }} />
                                     <span style={{
                                         position: 'absolute',
@@ -179,7 +204,8 @@ const Navbar = () => {
                                         width: '12px',
                                         height: '12px',
                                         borderLeft: '2px solid var(--accent-primary)',
-                                        borderBottom: '2px solid var(--accent-primary)'
+                                        borderBottom: '2px solid var(--accent-primary)',
+                                        boxShadow: '0 0 5px var(--accent-primary)'
                                     }} />
                                     <span style={{
                                         position: 'absolute',
@@ -188,15 +214,16 @@ const Navbar = () => {
                                         width: '12px',
                                         height: '12px',
                                         borderRight: '2px solid var(--accent-primary)',
-                                        borderBottom: '2px solid var(--accent-primary)'
+                                        borderBottom: '2px solid var(--accent-primary)',
+                                        boxShadow: '0 0 5px var(--accent-primary)'
                                     }} />
                                     <span style={{
-                                        fontSize: '1.5rem',
-                                        fontWeight: 300,
-                                        letterSpacing: '3px',
-                                        fontFamily: 'serif'
+                                        fontSize: '1.3rem',
+                                        fontWeight: 700,
+                                        color: 'var(--accent-primary)',
+                                        textShadow: '0 0 10px rgba(0, 255, 136, 0.5)'
                                     }}>
-                                        <span style={{ fontStyle: 'italic' }}>M</span>enu
+                                        Menu
                                     </span>
                                 </div>
                                 <button
@@ -207,13 +234,13 @@ const Navbar = () => {
                                         display: 'flex',
                                         alignItems: 'center',
                                         justifyContent: 'center',
-                                        background: 'rgba(255, 255, 255, 0.05)',
-                                        border: '1px solid rgba(255, 255, 255, 0.1)',
-                                        borderRadius: '8px',
-                                        color: '#fff',
+                                        background: 'transparent',
+                                        border: '2px solid var(--accent-primary)',
+                                        color: 'var(--accent-primary)',
                                         fontSize: '1.2rem',
                                         cursor: 'pointer',
-                                        transition: 'all 0.3s'
+                                        transition: 'all 0.3s',
+                                        clipPath: 'polygon(0 4px, 4px 0, calc(100% - 4px) 0, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 0 calc(100% - 4px))'
                                     }}
                                 >
                                     <FaTimes />
@@ -238,15 +265,19 @@ const Navbar = () => {
                                                     alignItems: 'center',
                                                     gap: '1rem',
                                                     padding: '1rem 2rem',
-                                                    color: isActive ? 'var(--accent-primary)' : 'rgba(255, 255, 255, 0.7)',
-                                                    fontSize: '1.1rem',
-                                                    fontWeight: isActive ? 600 : 400,
+                                                    color: isActive ? 'var(--accent-primary)' : 'var(--text-secondary)',
+                                                    fontSize: '0.9rem',
+                                                    fontFamily: 'var(--font-accent)',
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '0.15em',
+                                                    fontWeight: isActive ? 700 : 500,
                                                     transition: 'all 0.3s',
                                                     borderLeft: isActive ? '3px solid var(--accent-primary)' : '3px solid transparent',
-                                                    background: isActive ? 'rgba(139, 92, 246, 0.1)' : 'transparent'
+                                                    background: isActive ? 'rgba(0, 255, 136, 0.1)' : 'transparent',
+                                                    textShadow: isActive ? '0 0 10px rgba(0, 255, 136, 0.5)' : 'none'
                                                 })}
                                             >
-                                                <span style={{ fontSize: '1.2rem', width: '24px', textAlign: 'center' }}>
+                                                <span style={{ fontSize: '1.2rem', width: '24px', textAlign: 'center', color: 'var(--accent-primary)' }}>
                                                     {link.icon}
                                                 </span>
                                                 {link.name}
@@ -259,11 +290,13 @@ const Navbar = () => {
                             {/* Footer */}
                             <div style={{
                                 padding: '1.5rem 2rem',
-                                borderTop: '1px solid rgba(255, 255, 255, 0.08)',
+                                borderTop: '1px solid var(--border)',
                                 color: 'var(--text-muted)',
-                                fontSize: '0.85rem'
+                                fontSize: '0.75rem',
+                                fontFamily: 'var(--font-accent)',
+                                letterSpacing: '0.1em'
                             }}>
-                                <p>© 2025 Naveen S</p>
+                                <p>© 2026 Naveen S // SYSTEM ONLINE</p>
                             </div>
                         </motion.div>
                     </>
@@ -284,13 +317,16 @@ const Navbar = () => {
                     justify-content: center;
                     width: 44px;
                     height: 44px;
-                    border-radius: 10px;
-                    background: rgba(255, 255, 255, 0.05);
-                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    background: transparent;
+                    border: 2px solid var(--accent-primary);
                     transition: all 0.3s;
+                    clip-path: polygon(0 4px, 4px 0, calc(100% - 4px) 0, 100% 4px, 100% calc(100% - 4px), calc(100% - 4px) 100%, 4px 100%, 0 calc(100% - 4px));
+                }
+                .mobile-toggle:hover {
+                    background: rgba(0, 255, 136, 0.1);
+                    box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
                 }
                 .mobile-toggle:active {
-                    background: rgba(139, 92, 246, 0.2);
                     transform: scale(0.95);
                 }
                 @media (min-width: 768px) {

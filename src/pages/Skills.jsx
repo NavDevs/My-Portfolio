@@ -5,33 +5,45 @@ const Skills = () => {
         {
             title: "Programming Languages",
             skills: [
-                { name: "C", level: 80 },
-                { name: "Java", level: 75 },
-                { name: "Python", level: 85 },
-                { name: "JavaScript", level: 90 }
+                { name: "Python", level: 90 },
+                { name: "JavaScript (ES6+)", level: 90 },
+                { name: "Java", level: 80 },
+                { name: "C", level: 75 }
             ]
         },
         {
-            title: "Frameworks & Tools",
+            title: "Frontend Development",
             skills: [
-                { name: "React.js", level: 85 },
-                { name: "Node.js", level: 70 },
-                { name: "Git & GitHub", level: 80 }
+                { name: "React.js", level: 88 },
+                { name: "HTML5", level: 95 },
+                { name: "CSS3", level: 92 },
+                { name: "Tailwind CSS", level: 85 },
+                { name: "Bootstrap", level: 85 }
+            ]
+        },
+        {
+            title: "Backend Development",
+            skills: [
+                { name: "Node.js", level: 82 },
+                { name: "Express.js", level: 80 },
+                { name: "RESTful APIs", level: 85 },
+                { name: "JWT Authentication", level: 78 },
+                { name: "Firebase", level: 75 }
             ]
         },
         {
             title: "Databases",
             skills: [
-                { name: "MySQL", level: 75 },
-                { name: "MongoDB", level: 70 }
+                { name: "MongoDB", level: 78 },
+                { name: "MySQL", level: 80 }
             ]
         },
         {
-            title: "Web Technologies",
+            title: "Tools & Platforms",
             skills: [
-                { name: "HTML5", level: 95 },
-                { name: "CSS3", level: 90 },
-                { name: "JavaScript ES6+", level: 88 }
+                { name: "Git & GitHub", level: 88 },
+                { name: "Jupyter Notebook", level: 82 },
+                { name: "Render", level: 75 }
             ]
         }
     ]
@@ -56,7 +68,7 @@ const Skills = () => {
         >
             {/* Header */}
             <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}>
-                <h1 className="section-title">Skills</h1>
+                <h1 className="section-title cyber-glitch" data-text="SKILLS">SKILLS</h1>
                 <div className="section-underline" />
             </motion.div>
 
@@ -76,39 +88,62 @@ const Skills = () => {
                         key={catIdx}
                         variants={itemVariants}
                         className="card"
-                        style={{ padding: '1.5rem' }}
+                        style={{ 
+                            padding: '1.5rem',
+                            border: '1px solid var(--border)',
+                            clipPath: 'polygon(0 10px, 10px 0, calc(100% - 10px) 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0 calc(100% - 10px))'
+                        }}
                     >
                         <h3 style={{
-                            color: 'var(--accent-primary)',
-                            fontSize: '1.1rem',
+                            color: catIdx % 2 === 0 ? 'var(--accent-primary)' : 'var(--accent-secondary)',
+                            fontSize: '1rem',
                             marginBottom: '1.5rem',
-                            fontWeight: 600
+                            fontWeight: 700,
+                            fontFamily: 'var(--font-heading)',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.1em',
+                            textShadow: catIdx % 2 === 0 
+                                ? '0 0 10px rgba(0, 255, 136, 0.5)' 
+                                : '0 0 10px rgba(255, 0, 255, 0.5)'
                         }}>
-                            {category.title}
+                            {'>'} {category.title}
                         </h3>
 
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
                             {category.skills.map((skill, idx) => (
                                 <div key={idx}>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.4rem' }}>
-                                        <span style={{ color: '#fff', fontSize: '0.95rem' }}>{skill.name}</span>
-                                        <span style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>{skill.level}%</span>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
+                                        <span style={{ 
+                                            color: '#fff', 
+                                            fontSize: '0.85rem',
+                                            fontFamily: 'var(--font-body)',
+                                            letterSpacing: '0.05em'
+                                        }}>{skill.name}</span>
+                                        <span style={{ 
+                                            color: 'var(--accent-primary)', 
+                                            fontSize: '0.8rem',
+                                            fontFamily: 'var(--font-accent)',
+                                            textShadow: '0 0 8px rgba(0, 255, 136, 0.4)'
+                                        }}>{skill.level}%</span>
                                     </div>
                                     <div style={{
-                                        background: 'rgba(255,255,255,0.08)',
-                                        borderRadius: '4px',
-                                        height: '6px',
-                                        overflow: 'hidden'
+                                        background: 'rgba(42, 42, 58, 0.5)',
+                                        height: '8px',
+                                        overflow: 'hidden',
+                                        border: '1px solid var(--border)'
                                     }}>
                                         <motion.div
                                             initial={{ width: 0 }}
                                             animate={{ width: `${skill.level}%` }}
-                                            transition={{ duration: 1, delay: 0.3 + catIdx * 0.1 + idx * 0.05 }}
+                                            transition={{ duration: 1.2, delay: 0.3 + catIdx * 0.1 + idx * 0.05 }}
                                             style={{
                                                 height: '100%',
-                                                background: 'var(--accent-gradient)',
-                                                borderRadius: '4px',
-                                                boxShadow: '0 0 10px var(--accent-glow)'
+                                                background: catIdx % 2 === 0 
+                                                    ? 'linear-gradient(90deg, var(--accent-primary), var(--accent-tertiary))' 
+                                                    : 'linear-gradient(90deg, var(--accent-secondary), var(--accent-primary))',
+                                                boxShadow: catIdx % 2 === 0
+                                                    ? '0 0 10px var(--accent-primary), 0 0 20px rgba(0, 255, 136, 0.3)'
+                                                    : '0 0 10px var(--accent-secondary), 0 0 20px rgba(255, 0, 255, 0.3)'
                                             }}
                                         />
                                     </div>
@@ -126,28 +161,98 @@ const Skills = () => {
                 transition={{ delay: 0.5 }}
                 style={{ marginTop: '2rem' }}
             >
-                <h3 style={{ color: '#fff', fontSize: '1.1rem', marginBottom: '1rem' }}>Operating Systems</h3>
+                <h3 style={{ 
+                    color: 'var(--accent-tertiary)', 
+                    fontSize: '1.1rem', 
+                    marginBottom: '1rem',
+                    fontFamily: 'var(--font-heading)',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.1em',
+                    textShadow: '0 0 10px rgba(0, 212, 255, 0.5)'
+                }}>
+                    {'>'} Operating_Systems
+                </h3>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.8rem' }}>
-                    {["Windows", "Ubuntu", "Linux"].map((os, idx) => (
+                    {["Windows", "Ubuntu"].map((os, idx) => (
                         <motion.span
                             key={idx}
                             whileHover={{
                                 y: -3,
-                                boxShadow: '0 8px 20px var(--accent-glow)',
-                                borderColor: 'var(--accent-primary)'
+                                boxShadow: '0 0 15px rgba(0, 255, 136, 0.4)',
+                                borderColor: 'var(--accent-primary)',
+                                color: 'var(--accent-primary)'
                             }}
                             style={{
                                 padding: '0.6rem 1.5rem',
-                                background: 'var(--bg-card)',
-                                border: '1px solid rgba(139, 92, 246, 0.2)',
-                                borderRadius: '50px',
+                                background: 'transparent',
+                                border: '2px solid var(--border)',
                                 color: '#fff',
-                                fontSize: '0.9rem',
+                                fontSize: '0.85rem',
+                                fontFamily: 'var(--font-accent)',
+                                letterSpacing: '0.1em',
+                                textTransform: 'uppercase',
                                 cursor: 'default',
-                                transition: 'all 0.3s'
+                                transition: 'all 0.3s',
+                                clipPath: 'polygon(0 6px, 6px 0, calc(100% - 6px) 0, 100% 6px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 0 calc(100% - 6px))'
                             }}
                         >
                             {os}
+                        </motion.span>
+                    ))}
+                </div>
+            </motion.div>
+
+            {/* Additional Skills */}
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 }}
+                style={{ marginTop: '2rem' }}
+            >
+                <h3 style={{ 
+                    color: 'var(--accent-secondary)', 
+                    fontSize: '1.1rem', 
+                    marginBottom: '1rem',
+                    fontFamily: 'var(--font-heading)',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.1em',
+                    textShadow: '0 0 10px rgba(255, 0, 255, 0.5)'
+                }}>
+                    {'>'} Additional_Expertise
+                </h3>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.8rem' }}>
+                    {[
+                        "Data Structures & Algorithms",
+                        "LLM Technologies",
+                        "RAG-based Systems",
+                        "AI-Powered Platforms",
+                        "Intelligent Automation",
+                        "Prompt Engineering",
+                        "Generative AI"
+                    ].map((skill, idx) => (
+                        <motion.span
+                            key={idx}
+                            whileHover={{
+                                y: -3,
+                                boxShadow: '0 0 15px rgba(255, 0, 255, 0.4)',
+                                borderColor: 'var(--accent-secondary)',
+                                color: 'var(--accent-secondary)'
+                            }}
+                            style={{
+                                padding: '0.6rem 1.5rem',
+                                background: 'transparent',
+                                border: '2px solid var(--border)',
+                                color: '#fff',
+                                fontSize: '0.8rem',
+                                fontFamily: 'var(--font-accent)',
+                                letterSpacing: '0.08em',
+                                textTransform: 'uppercase',
+                                cursor: 'default',
+                                transition: 'all 0.3s',
+                                clipPath: 'polygon(0 6px, 6px 0, calc(100% - 6px) 0, 100% 6px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 0 calc(100% - 6px))'
+                            }}
+                        >
+                            {skill}
                         </motion.span>
                     ))}
                 </div>
