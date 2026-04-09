@@ -41,6 +41,14 @@ const Projects = () => {
             tech: ["React", "TypeScript", "Netlify", "Responsive Design"],
             github: null,
             live: "https://sparkle-washer.netlify.app"
+        },
+        {
+            title: "📅 Smart Timetable Reminder – Academic Schedule Manager",
+            description: "A full-featured mobile application built with React Native & Expo to help students manage their academic schedule efficiently. Provides intelligent reminders for classes, assignments, and exams with priority-based task management and customizable themes.",
+            tech: ["React Native", "Expo SDK 54", "TypeScript", "Expo Router", "React Query", "Async Storage"],
+            github: null,
+            live: "https://campus-pulse-planner-fa9n.vercel.app/",
+            appType: "mobile"
         }
     ]
 
