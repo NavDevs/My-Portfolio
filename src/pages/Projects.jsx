@@ -18,6 +18,13 @@ const Projects = () => {
             github: "https://github.com/nas23ise-dot/InternAI",
             live: "https://ai-internship-frontend.onrender.com"
         },
+        {
+            title: "⚡ ExplainX – AI Text Explainer",
+            description: "A powerful Chrome Extension that provides instant AI-powered explanations for any text on the web. Select any text, click ExplainX, and get clear, concise explanations in seconds.",
+            tech: ["Chrome Extension", "JavaScript", "AI Integration", "HTML", "CSS"],
+            github: "https://github.com/navdevs/ExplainX",
+            live: "https://navdevs.github.io/ExplainX/"
+        },
 
         {
             title: "🪙 Gold Shopy – Digital Gold Management",
