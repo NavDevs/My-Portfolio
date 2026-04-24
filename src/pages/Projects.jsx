@@ -4,6 +4,13 @@ import { FaGithub, FaExternalLinkAlt, FaGooglePlay, FaMobile } from 'react-icons
 const Projects = () => {
     const projects = [
         {
+            title: "🚑 EV Priority System – ML Traffic Control",
+            description: "ML-powered emergency vehicle priority system using Random Forest algorithm with 99.2% accuracy. Optimizes traffic signal preemption for 60% faster emergency response times across 17 road layouts.",
+            tech: ["Next.js 16", "TypeScript", "Tailwind CSS", "Random Forest ML"],
+            github: "https://github.com/NavDevs/Emergency_Vehicles",
+            live: "https://emergency-vehicles.onrender.com"
+        },
+        {
             title: "🧠 DocMind – AI Document Assistant",
             description: "A full-stack RAG application that lets you upload PDFs and chat with them using AI. Get instant summaries, ask questions, and track usage through an analytics dashboard.",
             tech: ["React", "Node.js", "MongoDB", "OpenAI", "Firebase", "Pinecone"],
