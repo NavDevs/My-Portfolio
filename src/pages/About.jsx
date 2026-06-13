@@ -73,6 +73,11 @@ const About = () => {
 
     const experience = [
         {
+            period: "2025",
+            title: "Real-Time Systems Developer",
+            description: "Built CollabCode — a full-featured browser-based collaborative code editor with Yjs CRDT real-time sync, Socket.IO WebSockets, integrated Linux terminal (xterm.js), GitHub OAuth import/push, 22-language execution, persistent team chat, and live cursors. Deployed on Render with MongoDB Atlas."
+        },
+        {
             period: "2023 - Present",
             title: "Full Stack Developer",
             description: "Building modern, responsive web applications using React.js, Node.js, and databases like MySQL and MongoDB. Passionate about creating seamless user experiences."
@@ -152,7 +157,7 @@ const About = () => {
                     fontFamily: 'var(--font-body)',
                     fontSize: '0.9rem'
                 }}>
-                    Aspiring Software Engineer with hands-on experience in building AI-driven and scalable full-stack applications using the MERN stack and modern LLM technologies. Skilled in Data Structures, RESTful API development, and RAG-based systems, with experience in developing secure, AI-powered platforms that improve efficiency by up to 50%. Passionate about building production-ready solutions that solve real-world problems through intelligent automation.
+                    Aspiring Software Engineer with hands-on experience in building AI-driven, real-time collaborative, and scalable full-stack applications using the MERN stack, WebSockets, and modern LLM technologies. Skilled in Data Structures, RESTful API development, CRDT-based real-time systems, and RAG architectures, with experience in developing secure, AI-powered platforms that improve efficiency by up to 50%. Passionate about building production-ready solutions that solve real-world problems through intelligent automation and real-time collaboration.
                 </p>
             </motion.div>
 

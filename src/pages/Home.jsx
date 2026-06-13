@@ -141,11 +141,13 @@ const Home = () => {
                         boxShadow: '0 0 15px rgba(0, 255, 136, 0.15)'
                     }}
                 >
-                    <span style={{ color: 'var(--text-muted)' }}>{'>'} </span>
+                    <span style={{ color: 'var(--text-muted)' }}>{'>  '}</span>
                     <span>LOADING SKILLS:</span>
                     <span style={{ color: 'var(--accent-tertiary)' }}> MERN Stack</span>
                     <span style={{ color: 'var(--text-muted)' }}> | </span>
                     <span style={{ color: 'var(--accent-tertiary)' }}>LLM & AI</span>
+                    <span style={{ color: 'var(--text-muted)' }}> | </span>
+                    <span style={{ color: 'var(--accent-tertiary)' }}>Real-Time Systems</span>
                     <span style={{ color: 'var(--text-muted)' }}> | </span>
                     <span style={{ color: 'var(--accent-tertiary)' }}>RAG Systems</span>
                     <span style={{ color: 'var(--text-muted)' }}> | </span>

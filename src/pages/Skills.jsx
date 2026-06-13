@@ -7,6 +7,7 @@ const Skills = () => {
             skills: [
                 { name: "Python", level: 90 },
                 { name: "JavaScript (ES6+)", level: 90 },
+                { name: "TypeScript", level: 82 },
                 { name: "Java", level: 80 },
                 { name: "C", level: 75 }
             ]
@@ -15,6 +16,7 @@ const Skills = () => {
             title: "Frontend Development",
             skills: [
                 { name: "React.js", level: 88 },
+                { name: "Next.js", level: 80 },
                 { name: "HTML5", level: 95 },
                 { name: "CSS3", level: 92 },
                 { name: "Tailwind CSS", level: 85 },
@@ -26,7 +28,9 @@ const Skills = () => {
             skills: [
                 { name: "Node.js", level: 82 },
                 { name: "Express.js", level: 80 },
+                { name: "Socket.IO", level: 85 },
                 { name: "RESTful APIs", level: 85 },
+                { name: "Mongoose", level: 80 },
                 { name: "JWT Authentication", level: 78 },
                 { name: "Firebase", level: 75 }
             ]
@@ -35,14 +39,17 @@ const Skills = () => {
             title: "Databases",
             skills: [
                 { name: "MongoDB", level: 78 },
-                { name: "MySQL", level: 80 }
+                { name: "MySQL", level: 80 },
+                { name: "Redis", level: 70 }
             ]
         },
         {
             title: "Tools & Platforms",
             skills: [
                 { name: "Git & GitHub", level: 88 },
+                { name: "Vite", level: 85 },
                 { name: "Jupyter Notebook", level: 82 },
+                { name: "Vercel", level: 78 },
                 { name: "Render", level: 75 }
             ]
         }
@@ -173,7 +180,7 @@ const Skills = () => {
                     {'>'} Operating_Systems
                 </h3>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.8rem' }}>
-                    {["Windows", "Ubuntu"].map((os, idx) => (
+                    {["Windows", "Ubuntu", "Linux"].map((os, idx) => (
                         <motion.span
                             key={idx}
                             whileHover={{
@@ -225,10 +232,16 @@ const Skills = () => {
                         "Data Structures & Algorithms",
                         "LLM Technologies",
                         "RAG-based Systems",
+                        "WebSocket & Real-Time Systems",
+                        "CRDT Collaboration",
                         "AI-Powered Platforms",
                         "Intelligent Automation",
                         "Prompt Engineering",
-                        "Generative AI"
+                        "Generative AI",
+                        "OAuth2 & Authentication",
+                        "GitHub API Integration",
+                        "Terminal Emulation",
+                        "Code Editor Integration"
                     ].map((skill, idx) => (
                         <motion.span
                             key={idx}

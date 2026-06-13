@@ -4,6 +4,13 @@ import { FaGithub, FaExternalLinkAlt, FaGooglePlay, FaMobile } from 'react-icons
 const Projects = () => {
     const projects = [
         {
+            title: "🚀 CollabCode – Real-Time Collaborative Code Editor",
+            description: "A full-featured browser-based collaborative code editor where multiple developers build full-stack apps together in real time. Features Monaco editor with Yjs CRDT collaboration, integrated Linux terminal, GitHub import/push, 22 programming languages with live preview, persistent team chat, and real-time cursors & presence.",
+            tech: ["React", "Node.js", "MongoDB", "Socket.IO", "Yjs CRDT", "Monaco Editor", "xterm.js", "Clerk Auth", "GitHub API", "Redis"],
+            github: "https://github.com/NavDevs/CollabCode",
+            live: "https://collabcode-ihw7.onrender.com"
+        },
+        {
             title: "🚑 EV Priority System – ML Traffic Control",
             description: "ML-powered emergency vehicle priority system using Random Forest algorithm with 99.2% accuracy. Optimizes traffic signal preemption for 60% faster emergency response times across 17 road layouts.",
             tech: ["Next.js 16", "TypeScript", "Tailwind CSS", "Random Forest ML"],
