@@ -22,7 +22,7 @@ const Projects = () => {
             description: "A multi-threaded Deep Packet Inspection system that analyzes network traffic to identify applications, block unwanted traffic, and provide detailed insights. Features SNI extraction from TLS handshakes, flow-based blocking, load-balanced thread architecture, and a Flask web dashboard.",
             tech: ["C++17", "Python", "Flask", "Multi-threading", "TLS/SNI", "PCAP", "Network Protocols"],
             github: "https://github.com/NavDevs/DPI-Engine",
-            live: "https://packet-analyzer-4xcw.onrender.com/"
+            live: "https://packet-analyzer-iota.vercel.app"
         },
         {
             title: "🚑 EV Priority System – ML Traffic Control",
