@@ -31,6 +31,7 @@ const Skills = () => {
                 { name: "Socket.IO", level: 85 },
                 { name: "RESTful APIs", level: 85 },
                 { name: "Mongoose", level: 80 },
+                { name: "Prisma", level: 78 },
                 { name: "JWT Authentication", level: 78 },
                 { name: "Firebase", level: 75 }
             ]
@@ -39,6 +40,7 @@ const Skills = () => {
             title: "Databases",
             skills: [
                 { name: "MongoDB", level: 78 },
+                { name: "PostgreSQL", level: 78 },
                 { name: "MySQL", level: 80 },
                 { name: "Redis", level: 70 }
             ]
@@ -50,6 +52,7 @@ const Skills = () => {
                 { name: "Vite", level: 85 },
                 { name: "Jupyter Notebook", level: 82 },
                 { name: "Vercel", level: 78 },
+                { name: "Docker", level: 75 },
                 { name: "Render", level: 75 }
             ]
         }
@@ -241,7 +244,9 @@ const Skills = () => {
                         "OAuth2 & Authentication",
                         "GitHub API Integration",
                         "Terminal Emulation",
-                        "Code Editor Integration"
+                        "Code Editor Integration",
+                        "Cron & Task Scheduling",
+                        "Docker & Containerization"
                     ].map((skill, idx) => (
                         <motion.span
                             key={idx}

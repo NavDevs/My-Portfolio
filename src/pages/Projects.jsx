@@ -11,6 +11,13 @@ const Projects = () => {
             live: "https://collabcode-ihw7.onrender.com"
         },
         {
+            title: "⏱️ CronDash – Visual Cron Job Manager",
+            description: "A web-based cron job management system with a terminal-style interface. Schedule, monitor, and manage automated HTTP tasks with precision. Features cron expression scheduling, execution history with status logs, Slack/email/webhook failure alerts, and a 'keep-alive' system for Render free-tier apps.",
+            tech: ["Next.js 16", "TypeScript", "React 19", "Tailwind CSS", "PostgreSQL", "Prisma", "JWT Auth", "Docker", "node-cron"],
+            github: "https://github.com/NavDevs/CronDash",
+            live: "https://cron-dash.onrender.com"
+        },
+        {
             title: "🚑 EV Priority System – ML Traffic Control",
             description: "ML-powered emergency vehicle priority system using Random Forest algorithm with 99.2% accuracy. Optimizes traffic signal preemption for 60% faster emergency response times across 17 road layouts.",
             tech: ["Next.js 16", "TypeScript", "Tailwind CSS", "Random Forest ML"],
