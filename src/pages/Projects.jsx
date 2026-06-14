@@ -67,7 +67,8 @@ const Projects = () => {
             description: "A comprehensive safety application with real-time GPS tracking, emergency SOS alerts, 3-layer protection system, and community volunteer network. Features cyber & physical emergency response.",
             tech: ["Flutter", "Dart", "Google Maps", "Firebase", "Provider"],
             github: "https://github.com/nas23ise-dot/SafeCity",
-            live: "https://safe-cty.netlify.app/"
+            live: "https://safe-cty.netlify.app/",
+            apk: "https://drive.google.com/drive/folders/1Osf8jMaN_GrT0kpfCPdcXufKZ2qOa4-k?usp=sharing"
         },
         {
             title: "✨ Sparkle Wash – Vehicle Cleaning Service",
@@ -249,6 +250,33 @@ const Projects = () => {
                                 >
                                     {project.appType === 'mobile' ? <FaMobile /> : <FaExternalLinkAlt />}
                                     {project.appType === 'mobile' ? '[APK]' : '[LIVE]'}
+                                </a>
+                            )}
+                            {project.apk && (
+                                <a
+                                    href={project.apk}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    style={{
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        gap: '0.4rem',
+                                        color: 'var(--text-muted)',
+                                        fontSize: '0.8rem',
+                                        fontFamily: 'var(--font-accent)',
+                                        transition: 'all 0.3s',
+                                        letterSpacing: '0.05em'
+                                    }}
+                                    onMouseEnter={(e) => {
+                                        e.currentTarget.style.color = 'var(--accent-primary)';
+                                        e.currentTarget.style.textShadow = '0 0 8px rgba(0, 255, 136, 0.5)';
+                                    }}
+                                    onMouseLeave={(e) => {
+                                        e.currentTarget.style.color = 'var(--text-muted)';
+                                        e.currentTarget.style.textShadow = 'none';
+                                    }}
+                                >
+                                    <FaMobile /> [APK]
                                 </a>
                             )}
                             {project.api && (
