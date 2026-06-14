@@ -30,7 +30,7 @@ const About = () => {
             period: "2019 - 2021",
             title: "SSLC - Karnataka State Board",
             institution: "St. Francis High School, Bengaluru",
-            score: "Percentage: 90.88%"
+            score: "Percentage: 90%"
         }
     ]
 
