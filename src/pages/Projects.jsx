@@ -18,6 +18,13 @@ const Projects = () => {
             live: "https://cron-dash.onrender.com"
         },
         {
+            title: "🔍 DPI Engine – Deep Packet Inspection System",
+            description: "A multi-threaded Deep Packet Inspection system that analyzes network traffic to identify applications, block unwanted traffic, and provide detailed insights. Features SNI extraction from TLS handshakes, flow-based blocking, load-balanced thread architecture, and a Flask web dashboard.",
+            tech: ["C++17", "Python", "Flask", "Multi-threading", "TLS/SNI", "PCAP", "Network Protocols"],
+            github: "https://github.com/NavDevs/DPI-Engine",
+            live: "https://packet-analyzer-4xcw.onrender.com/"
+        },
+        {
             title: "🚑 EV Priority System – ML Traffic Control",
             description: "ML-powered emergency vehicle priority system using Random Forest algorithm with 99.2% accuracy. Optimizes traffic signal preemption for 60% faster emergency response times across 17 road layouts.",
             tech: ["Next.js 16", "TypeScript", "Tailwind CSS", "Random Forest ML"],

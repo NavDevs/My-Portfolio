@@ -9,6 +9,7 @@ const Skills = () => {
                 { name: "JavaScript (ES6+)", level: 90 },
                 { name: "TypeScript", level: 82 },
                 { name: "Java", level: 80 },
+                { name: "C++", level: 78 },
                 { name: "C", level: 75 }
             ]
         },
@@ -246,7 +247,9 @@ const Skills = () => {
                         "Terminal Emulation",
                         "Code Editor Integration",
                         "Cron & Task Scheduling",
-                        "Docker & Containerization"
+                        "Docker & Containerization",
+                        "Network Security & DPI",
+                        "Multi-threaded Concurrency"
                     ].map((skill, idx) => (
                         <motion.span
                             key={idx}
