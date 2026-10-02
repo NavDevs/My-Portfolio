@@ -91,6 +91,14 @@ const Projects = () => {
             github: null,
             live: "https://campus-pulse-planner-fa9n.vercel.app/",
             appType: "mobile"
+        },
+        {
+            title: "🚗 Roadly – Community-Powered Road Safety App",
+            description: "A community-driven Flutter app that lets citizens report road incidents in real time. Features an interactive Socket.IO map with distance indicators, photo evidence from camera or gallery, server-side TTL auto-expiry for every report, and gamified points, badges, ranks & weekly leaderboards to reward active reporters.",
+            tech: ["Flutter", "Dart", "Socket.IO", "Provider", "Geolocator", "Google Fonts", "Material Design 3"],
+            github: "https://github.com/NavDevs/Roadly-",
+            live: "https://navdevs.github.io/Roadly-/",
+            apk: "https://github.com/NavDevs/Roadly-/releases/download/v1.0.11/Roadly-v1.0.11-final.apk"
         }
     ]
 
