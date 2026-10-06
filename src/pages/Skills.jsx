@@ -8,6 +8,7 @@ const Skills = () => {
                 { name: "Python", level: 90 },
                 { name: "JavaScript (ES6+)", level: 90 },
                 { name: "TypeScript", level: 82 },
+                { name: "Dart", level: 82 },
                 { name: "Java", level: 80 },
                 { name: "C++", level: 78 },
                 { name: "C", level: 75 }
@@ -23,6 +24,28 @@ const Skills = () => {
                 { name: "CSS3", level: 92 },
                 { name: "Tailwind CSS", level: 85 },
                 { name: "Bootstrap", level: 85 }
+            ]
+        },
+        {
+            title: "Mobile Development",
+            skills: [
+                { name: "Flutter 3.9+", level: 85 },
+                { name: "Provider", level: 80 },
+                { name: "Socket.IO Live Maps", level: 85 },
+                { name: "Geolocator", level: 80 },
+                { name: "Image Picker", level: 78 },
+                { name: "Shared Preferences", level: 78 },
+                { name: "Material Design 3", level: 85 }
+            ]
+        },
+        {
+            title: "AI & LLM Integration",
+            skills: [
+                { name: "Groq Llama 3.2 Vision", level: 82 },
+                { name: "Llama 3.3 70B", level: 80 },
+                { name: "RAG Systems", level: 80 },
+                { name: "Prompt Engineering", level: 85 },
+                { name: "Vision Photo Analysis", level: 80 }
             ]
         },
         {
@@ -54,6 +77,8 @@ const Skills = () => {
             skills: [
                 { name: "Git & GitHub", level: 88 },
                 { name: "Vite", level: 85 },
+                { name: "Flutter SDK", level: 85 },
+                { name: "Android Studio", level: 80 },
                 { name: "Jupyter Notebook", level: 82 },
                 { name: "Vercel", level: 78 },
                 { name: "Docker", level: 75 },
@@ -237,6 +262,12 @@ const Skills = () => {
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.8rem' }}>
                     {[
                         "Data Structures & Algorithms",
+                        "Flutter Mobile Development",
+                        "Groq Llama 3.2 Vision",
+                        "ClearPath Server Integration",
+                        "Socket.IO Live Mapping",
+                        "Gamified Rewards Systems",
+                        "Phone Authentication",
                         "LLM Technologies",
                         "RAG-based Systems",
                         "WebSocket & Real-Time Systems",
