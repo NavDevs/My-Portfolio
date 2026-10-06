@@ -98,7 +98,7 @@ const Projects = () => {
             tech: ["Flutter", "Dart", "Socket.IO", "Provider", "Geolocator", "Google Fonts", "Material Design 3"],
             github: "https://github.com/NavDevs/Roadly-",
             live: "https://navdevs.github.io/Roadly-/",
-            apk: "https://github.com/NavDevs/Roadly-/releases/download/v1.0.11/Roadly-v1.0.11-final.apk"
+            apk: "https://github.com/NavDevs/Roadly-/releases/download/v1.2.0/Roadly-v1.2.0-Final.apk"
         }
     ]
 
