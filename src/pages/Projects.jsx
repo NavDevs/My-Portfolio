@@ -95,7 +95,7 @@ const Projects = () => {
         {
             title: "🚗 Roadly – Community-Powered Road Safety App",
             description: "v1.2.0 Final – production build integrated with ClearPath server. Community-driven Flutter app for real-time road incident reporting with Socket.IO live map, Groq Llama 3.2 90B Vision photo analysis, server-side TTL auto-expiry, Signal-Aid emergency dispatch, and gamified points, badges, ranks & weekly leaderboards.",
-            tech: ["Flutter", "Dart", "Socket.IO", "ClearPath Server", "Groq Llama 3.2 Vision", "Provider", "Geolocator", "Image Picker", "Material Design 3"],
+            tech: ["Flutter", "Dart", "Socket.IO", "ClearPath Server", "Provider", "Geolocator", "Image Picker", "Material Design 3"],
             github: "https://github.com/NavDevs/Roadly-",
             live: "https://navdevs.github.io/Roadly-/",
             apk: "https://github.com/NavDevs/Roadly-/releases/download/v1.2.0/Roadly-v1.2.0-Final.apk"
