@@ -99,6 +99,14 @@ const Projects = () => {
             github: "https://github.com/NavDevs/Roadly-",
             live: "https://navdevs.github.io/Roadly-/",
             apk: "https://github.com/NavDevs/Roadly-/releases/download/v1.2.0/Roadly-v1.2.0-Final.apk"
+        },
+        {
+            title: "🚨 Signal Aid – Emergency Response Mobile App",
+            description: "A Flutter emergency response system for ambulance drivers featuring ML-powered traffic signal preemption, real-time dispatch planning via Socket.IO, criticality-based route optimization (Normal/High/Critical), live intersection status tracking, trip history, and server-reset protection. Built for Android with Provider state management.",
+            tech: ["Flutter", "Dart", "Provider", "Socket.IO", "SharedPreferences", "Material Design 3", "Gradle"],
+            github: "https://github.com/NavDevs/Signal-Aid",
+            live: "https://navdevs.github.io/Signal-Aid/",
+            apk: "https://github.com/NavDevs/Signal-Aid/releases/latest"
         }
     ]
 

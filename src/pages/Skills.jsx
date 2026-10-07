@@ -286,7 +286,11 @@ const Skills = () => {
                         "Multi-threaded Concurrency",
                         "Software Architecture Analysis",
                         "Graph Visualization (Dagre)",
-                        "Security Auditing"
+                        "Security Auditing",
+                        "Emergency Response Systems",
+                        "ML Signal Preemption",
+                        "Android APK Builds",
+                        "State Management (Provider)"
                     ].map((skill, idx) => (
                         <motion.span
                             key={idx}
